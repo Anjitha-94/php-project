@@ -89,3 +89,80 @@ Your HTML code looks decent, but there are always ways to make it more structure
 6. **Validation**: Always ensure that your HTML code is valid by running it through an HTML validator. This can help catch any syntax errors.
 
 Overall, your code is well-structured, and these suggestions are mostly for better code organization and maintainability.
+
+
+
+
+for the doctors file
+
+Your HTML code appears to be well-structured, but there are still a few improvements you can make for better organization and maintainability. Here are some suggestions:
+
+Semantic Elements: Use HTML5 semantic elements for better structure. Consider using <header> for the header, <nav> for navigation, <section> for content sections, and <footer> for the footer.
+
+Comments: Adding comments is a good practice. They help you and other developers understand the purpose of different sections of your code.
+
+Consistency: Ensure consistency in naming conventions, especially class names. Consider using more meaningful class names.
+
+Accessibility: Add alt attributes for images, if any, and ensure that your HTML is accessible.
+
+External Resources: Keep your CSS in an external stylesheet (as you've done with "styles.css").
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Clinic Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>List of Clinic Details</h1>
+    </header>
+
+    <nav class="navWrap">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Doctor Listings and Details</h2>
+            <div class="clinic">
+                <a href="clinic-details.html" class="clinic-name">Clinic 1</a>
+                <p><strong>Address:</strong> 123 Main St, Courtenay, BC ZIP</p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Email:</strong> <a href="mailto:clinic1@example.com">clinic1@example.com</a></p>
+            </div>
+
+            <div class="clinic">
+                <a href="clinic-details.html" class="clinic-name">Clinic 2</a>
+                <p><strong>Address:</strong> 456 Elm St, Comox, BC ZIP</p>
+                <p><strong>Phone:</strong> (555) 987-6543</p>
+                <p><strong>Email:</strong> <a href="mailto:clinic2@example.com">clinic2@example.com</a></p>
+            </div>
+
+            <div class="clinic">
+                <a href="clinic-details.html" class="clinic-name">Clinic 3</a>
+                <p><strong>Address:</strong> 145 Main St, Courtenay, BC ZIP</p>
+                <p><strong>Phone:</strong> (555) 123-4789</p>
+                <p><strong>Email:</strong> <a href="mailto:clinic3@example.com">clinic3@example.com</a></p>
+            </div>
+
+            <div class="clinic">
+                <a href="clinic-details.html" class="clinic-name">Clinic 4</a>
+                <p><strong>Address:</strong> 789 Main St, Comox, BC ZIP</p>
+                <p><strong>Phone:</strong> (555) 189-4521</p>
+                <p><strong>Email:</strong> <a href="mailto:clinic4@example.com">clinic4@example.com</a></p>
+            </div>
+            <!-- Add more clinics as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Clinic Name</p>
+    </footer>
+</body>
+</html>
+
