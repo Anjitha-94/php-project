@@ -25,6 +25,7 @@
             <p>Find the right doctor and book an appointment today.</p>
            <!-- Form  -->
        <form action="#" method="post" id="contactForm" class="contactForm">
+        
         <div>
           <label for="fullName">Your Name:</label>
           <input type="text" name="fullName" id="fullName" required>
@@ -38,17 +39,38 @@
         <div>
           <label for="email">Email:</label>
           <input type="email" name="email" id="email" required>
-        </div>
-        <!-- ... (previous HTML code) ... -->
-
-<!-- Login Success Popup (Hidden by default) -->
-<div id="login-success-popup" class="popup">
+          div id="login-success-popup" class="popup">
   <div class="popup-content">
       <span class="close" id="close-popup">&times;</span>
       <h3>Login Successful</h3>
       <p>You are now logged in the page for 15 minutes</p>
   </div>
 </div>
+        </div>
+      </form>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+        const loginButton = document.getElementById("login-button");
+            const loginSuccessPopup = document.getElementById("login-success-popup");
+            const closePopup = document.getElementById("close-popup");
+
+            loginButton.addEventListener("click", function () {
+                // Simulate a successful login
+                // You should replace this with your actual login logic
+                loginSuccessPopup.style.display = "block";
+            });
+
+            // Close the popup when the close button is clicked
+            closePopup.addEventListener("click", function () {
+                loginSuccessPopup.style.display = "none";
+            });
+        });
+        </script>
+      
+        
+
+<!-- Login Success Popup (Hidden by default) -->
+
 
         <div class="search-container">
             <select id="specialty" name="specialty">
