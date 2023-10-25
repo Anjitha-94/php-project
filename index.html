@@ -24,6 +24,7 @@
             <h2>Welcome to our Doctor Booking System</h2>
             <p>Find the right doctor and book an appointment today.</p>
            <!-- Form  -->
+                    
        <form action="#" method="post" id="contactForm" class="contactForm">
         
         <div>
@@ -39,37 +40,29 @@
         <div>
           <label for="email">Email:</label>
           <input type="email" name="email" id="email" required>
-          div id="login-success-popup" class="popup">
-  <div class="popup-content">
-      <span class="close" id="close-popup">&times;</span>
-      <h3>Login Successful</h3>
-      <p>You are now logged in the page for 15 minutes</p>
-  </div>
-</div>
-        </div>
-      </form>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-        const loginButton = document.getElementById("login-button");
-            const loginSuccessPopup = document.getElementById("login-success-popup");
-            const closePopup = document.getElementById("close-popup");
-
-            loginButton.addEventListener("click", function () {
-                // Simulate a successful login
-                // You should replace this with your actual login logic
-                loginSuccessPopup.style.display = "block";
-            });
-
-            // Close the popup when the close button is clicked
-            closePopup.addEventListener("click", function () {
-                loginSuccessPopup.style.display = "none";
-            });
-        });
-        </script>
-      
-        
+     </div>   
+     <button type="button" id="login-button" class="btn">Login</button>
 
 <!-- Login Success Popup (Hidden by default) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Your login logic here
+
+    // Example: Show the login popup when the "Login" button is clicked
+    const loginButton = document.getElementById("login-button");
+    const loginPopup = document.getElementById("login-popup");
+    const closePopup = document.getElementById("close-popup");
+
+    loginButton.addEventListener("click", function () {
+        loginPopup.style.display = "block";
+    });
+
+    // Close the popup when the close button is clicked
+    closePopup.addEventListener("click", function () {
+        loginPopup.style.display = "none";
+    });
+});
+</script>
 
 
         <div class="search-container">
@@ -90,6 +83,7 @@
             <button id="search-specialty" class="search-button">Search by Specialty</button>
             <button id="search-location" class="search-button">Search by Location</button>
           </div>
+        </form>
           
         <section>
             <div class="button-container">
