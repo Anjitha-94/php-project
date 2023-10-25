@@ -52,23 +52,33 @@
 
 <!-- Login Success Popup (Hidden by default) -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Your login logic here
+  // Get the modal, close button, and login button
+var modal = document.getElementById("myModal");
+var closeBtn = modal.querySelector(".close");
+var loginButton = document.getElementById("login-button"); // Replace with the actual ID of your login button
 
-    // Example: Show the login popup when the "Login" button is clicked
-    const loginButton = document.getElementById("login-button");
-    const loginPopup = document.getElementById("login-popup");
-    const closePopup = document.getElementById("close-popup");
+// Function to display the modal
+function displayModal() {
+  
+    modal.style.display = "block";
+}
 
-    loginButton.addEventListener("click", function () {
-        loginPopup.style.display = "block";
-    });
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
 
-    // Close the popup when the close button is clicked
-    closePopup.addEventListener("click", function () {
-        loginPopup.style.display = "none";
-    });
+// Event listeners
+loginButton.addEventListener("click", displayModal);
+closeBtn.addEventListener("click", closeModal);
+
+// You can also add an event listener to close the modal when the user clicks outside of it
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
 });
+
 </script>
 
 
