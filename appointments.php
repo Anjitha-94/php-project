@@ -1,8 +1,28 @@
-<?php require('partials/header.php')?>
-<?php require('partials/nav.php')?>
-
-<?php require('partials/banner.php')?>
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, title, and CSS link -->
+    <head>
+        <!-- Meta tags, title, and CSS link -->
+        <meta charset="UTF-8">
+        <title>Select Your date and time </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+</head>
+<body>
+    <header>
+        <!-- Header content -->
+    </header>
+    <section class="navWrap">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+             </ul>
+        </nav>
+        </section>
+    <main>
         <section>
             <!-- List of appointments and booking form -->
             <h1>Appointment Scheduling</h1>
@@ -53,4 +73,8 @@
         
     </main>
 
-    <?php require('partials/footer.php')?>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
