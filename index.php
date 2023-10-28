@@ -1,118 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Booking - Home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Doctor Booking System</h1>
-    </header>
-    <section class="navWrap">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="doctors.html">Doctors</a></li>
-            <li><a href="appointments.html">Appointments</a></li>
-        </ul>
-    </nav>
-    </section>
-    <main>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <!-- Content of the popup, e.g., login form -->
-            <p>You are now log in to the website for 15 minutes</p>
-        </div>
-    </div>
-        <section class="form" id="contact">
-            <h2>Welcome to our Doctor Booking System</h2>
-            <p>Find the right doctor and book an appointment today.</p>
-           <!-- Form  -->
-                    
-       <form action="#" method="post" id="contactForm" class="contactForm">
+<?php
+
+
+$uri = parse_url($_SERVER['REQUEST_URI']) ['path'];
+
+
+
+$routes = [
+    '/'=> 'controllers/index.php',
+    
+    '/appointments'=> 'controllers/appointments.php',
+    
+    '/clinic-details'=> 'controllers/clinic-details.php',
+
+    '/doctors'=> 'controllers/doctors.php',
+];
+
+//require 'functions.php';
+//require 'router.php';
+//connect to the database and execute a query
+
+function routeToController($uri, $routes){
+
+    if(array_key_exists($uri,$routes)){
+    
+        require $routes[$uri];
+    
+    }else{
+    
+        abort();
         
-        <div>
-          <label for="fullName">Your Name:</label>
-          <input type="text" name="fullName" id="fullName" required>
-        </div>
-      
-        <div>
-          <label for="phone">Phone:</label>
-          <input type="tel" name="phone" id="phone" maxlength="12" placeholder="111-222-3333" required>
-        </div>
-      
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" required>
-     </div>   
-     <button type="button" id="login-button" class="btn">Login</button>
-
-<!-- Login Success Popup (Hidden by default) -->
-<script>
-  // Get the modal, close button, and login button
-var modal = document.getElementById("myModal");
-var closeBtn = modal.querySelector(".close");
-var loginButton = document.getElementById("login-button"); // Replace with the actual ID of your login button
-
-// Function to display the modal
-function displayModal() {
-  
-    modal.style.display = "block";
-}
-
-// Function to close the modal
-function closeModal() {
-    modal.style.display = "none";
-}
-
-// Event listeners
-loginButton.addEventListener("click", displayModal);
-closeBtn.addEventListener("click", closeModal);
-
-// You can also add an event listener to close the modal when the user clicks outside of it
-window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        closeModal();
     }
-});
-
-</script>
-
-
-        <div class="search-container">
-            <select id="specialty" name="specialty">
-              <option value="cardiologist">Cardiologist</option>
-              <option value="dermatologist">Dermatologist</option>
-              <option value="orthopedic">Orthopedic</option>
-              <!-- Add more specialty options -->
-            </select>
-          
-            <select id="location" name="location">
-              <option value="courtenay">Courtenay</option>
-              <option value="comox">Comox</option>
-              <option value="campbell river">Campbell River</option>
-              <!-- Add more location options -->
-            </select>
-          
-            <button id="search-specialty" class="search-button">Search by Specialty</button>
-            <button id="search-location" class="search-button">Search by Location</button>
-          </div>
-        </form>
-          
-        <section>
-            <div class="button-container">
-                <a href="doctors.html" class="btn">Serach Doctor</a>   
-              </div>
-              
-           
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Doctor Booking System</p>
-    </footer>
-</body>
-</html>
+    }
+    
+    function abort($code = 404){
+        http_response_code($code);
+    
+        require "views/{$code}.php";
+    
+        die();
+    }
