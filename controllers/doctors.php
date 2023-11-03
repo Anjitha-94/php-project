@@ -2,7 +2,7 @@
 <?php
 
        
-       $heading = 'Contact Us';
+       $heading = 'Clinic list';
 
        
   require "views/doctors.view.php";

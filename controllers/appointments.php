@@ -2,7 +2,7 @@
 <?php
 
        
-       $heading = 'Contact Us';
+       $heading = 'Booking';
 
        
   require "views/appointments.view.php";

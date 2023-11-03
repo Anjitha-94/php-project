@@ -1,8 +1,6 @@
 <?php require('partials/header.php')?>
-<?php require('partials/nav.php')?>
 
-<?php require('partials/banner.php')?>
-<main>
+
         <section>
             <!-- List of appointments and booking form -->
             <h1>Appointment Scheduling</h1>
@@ -51,6 +49,6 @@
             });
         </script>
         
-    </main>
+
 
     <?php require('partials/footer.php')?>

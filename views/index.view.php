@@ -1,9 +1,7 @@
 <?php require('partials/header.php')?>
-<?php require('partials/nav.php')?>
 
-<?php require('partials/banner.php')?>
   
-<main>
+
       <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -88,12 +86,12 @@ window.addEventListener("click", function(event) {
           
         <section>
             <div class="button-container">
-                <a href="doctors.html" class="btn">Serach Doctor</a>   
+                <a href="views/doctors.view.php" class="btn">Serach Doctor</a>   
               </div>
               
            
         </section>
-    </main>
+ 
 
 
   <?php require('partials/footer.php')?>
