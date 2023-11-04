@@ -30,6 +30,13 @@
                     <p><strong>Email:</strong> <a href="mailto:clinic1@example.com">clinic1@example.com</a></p>
                 </div>
             </section>
+            <section>
+            <div class="button-container">
+                <a href="index.view.php" class="btn">Back</a>   
+              </div>
+              
+           
+        </section>
                 <!-- Add more clinics as needed -->
            
   

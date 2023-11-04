@@ -41,6 +41,13 @@
         </address>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.000000!3d40.000000!4sMap+Location!5e0!3m2!1sen!2us!4v0000000000000!5m2!1sen!2us" frameborder="0" allowfullscreen></iframe>
     </section>
+    <section>
+            <div class="button-container">
+                <a href="doctors.view.php" class="btn">Back</a>   
+              </div>
+              
+           
+        </section>
    
    
     <?php require('partials/footer.php')?>
