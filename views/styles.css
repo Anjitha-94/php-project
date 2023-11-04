@@ -222,6 +222,8 @@ select {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
+  margin: 10px;
 }
 
 .search-button:hover {
@@ -290,9 +292,71 @@ iframe {
   border: none;
 }
 
-/* Media queries for responsive design */
-@media (max-width: 600px) {
-  main {
-      padding: 10px;
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+      display: block;
+      text-align: center;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .form {
+      text-align: center;
+  }
+
+  .search-container {
+      text-align: center;
+  }
+
+  .search-button {
+      display: block;
+      margin: 10px auto;
   }
 }
+/*responsive for clinic list*/
+@media (max-width: 768px) {
+  nav ul {
+      display: block;
+      text-align: center;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .clinic {
+      margin: 20px 0;
+  }
+}
+/* clinic details*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em; /* Reduce font size for smaller screens */
+  }
+
+  section {
+    padding: 10px; /* Reduce padding for smaller screens */
+    margin: 5px 10px; /* Reduce margin for smaller screens */
+  }
+
+  .doctor {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    padding: 10px;
+  }
+
+  .doctor img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+

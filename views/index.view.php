@@ -65,13 +65,14 @@ window.addEventListener("click", function(event) {
 
 
         <div class="search-container">
+        <button id="search-specialty" class="search-button">Search by Specialty</button>
             <select id="specialty" name="specialty">
               <option value="cardiologist">Cardiologist</option>
               <option value="dermatologist">Dermatologist</option>
               <option value="orthopedic">Orthopedic</option>
               <!-- Add more specialty options -->
             </select>
-          
+            <button id="search-location" class="search-button">Search by Location</button>
             <select id="location" name="location">
               <option value="courtenay">Courtenay</option>
               <option value="comox">Comox</option>
@@ -79,8 +80,8 @@ window.addEventListener("click", function(event) {
               <!-- Add more location options -->
             </select>
           
-            <button id="search-specialty" class="search-button">Search by Specialty</button>
-            <button id="search-location" class="search-button">Search by Location</button>
+            
+           
           </div>
         </form>
           
