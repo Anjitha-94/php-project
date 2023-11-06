@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<section class="navWrap">
-    <nav>
+
+    <nav class="navWrap">
         <ul>
             <li><a href="\">Home</a></li>
 
         </ul>
     </nav>
-    </section>
+   

@@ -17,7 +17,6 @@ body {
 }
 h1,h2{
   user-select: none;
-  text-align: center;
 }
 
 /* Style the header */
@@ -73,41 +72,6 @@ li a:hover {
   justify-content: space-between;
 }
 
-
-/* Popup Styles */
-/* Style for the modal container */
-.modal {
-  display: none; /* Hide the modal by default */
-  position: fixed; /* Fixed positioning to overlay the entire page */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
-}
-
-/* Style for the modal content */
-.modal-content {
-  background-color: #fff; /* Background color for the modal content */
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  max-width: 400px; /* Adjust the width as needed */
-  margin: 20px auto; /* Center the modal vertically and horizontally */
-  padding: 20px;
-  position: relative;
-}
-
-/* Style for the close button */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-
 /* Style the main content */
 main {
   max-width: 800px;
@@ -144,6 +108,7 @@ footer {
   background-color: #223055;
   color: #fff;
   padding: 1rem 1rem 2rem;
+  width:700px;
 }
 
 .form p {
@@ -187,6 +152,7 @@ form#contactForm {
 /* Button Styles */
 .button-container {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .btn {
@@ -199,7 +165,6 @@ form#contactForm {
   border: 1px solid #007BFF;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
-  width: 25%;
 }
 
 .btn:hover {
@@ -210,9 +175,6 @@ form#contactForm {
 /* Search Button Styles */
 .search-container {
   text-align: center;
-  display: inline-flexbox;
-  margin: 10px;
-
 }
 
 select {
@@ -266,12 +228,36 @@ h1 {
 section {
   background-color: #e8b4b4;
   padding: 20px;
-  margin: 10px 20px;
+  margin: 30px 100px;
   border: 1px solid #ddd;
   border-radius: 5px;
-
+  width:fit-content;
+ }
+ .list{
+  background-color: #e8b4b4;
+  padding: 20px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width:700px;
 }
 
+ #location #treatments{
+  
+    background-color: #e8b4b4;
+    padding: 20px;
+    margin: 30px 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+ }
+ .booking{
+  background-color: #e8b4b4;
+  padding: 20px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: fit-content;
+ }
 .doctor {
   text-align: center;
   margin: 20px;
@@ -294,32 +280,9 @@ iframe {
   height: 300px;
   border: none;
 }
-/*appointment booking*/
-h1 {
-  font-size: 28px;
-  text-align: center;
-}
 
-form {
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-input, select, button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
+/* Media queries for responsive design */
+@media (max-width: 600px) {
   nav ul {
       display: block;
       text-align: center;
@@ -342,9 +305,7 @@ input, select, button {
       display: block;
       margin: 10px auto;
   }
-}
 /*responsive for clinic list*/
-@media (max-width: 768px) {
   nav ul {
       display: block;
       text-align: center;
@@ -358,9 +319,9 @@ input, select, button {
   .clinic {
       margin: 20px 0;
   }
-}
+
 /* clinic details*/
-@media (max-width: 768px) {
+
   h1 {
     font-size: 1.5em; /* Reduce font size for smaller screens */
   }
@@ -379,9 +340,9 @@ input, select, button {
     width: 100px;
     height: 100px;
   }
-}
+
 /* for appointment booking*/
-@media (max-width: 768px) {
+
   h1 {
       font-size: 24px; /* Reduce font size for smaller screens */
   }
@@ -394,7 +355,4 @@ input, select, button {
       font-size: 14px; /* Reduce font size for smaller screens */
   }
 }
-
-
-
 

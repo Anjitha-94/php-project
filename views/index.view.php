@@ -85,13 +85,13 @@ window.addEventListener("click", function(event) {
           </div>
         </form>
           
-        <section>
+        
             <div class="button-container">
                 <a href="views/doctors.view.php" class="btn">Serach Doctor</a>   
               </div>
               
            
-        </section>
+       
  
 
 

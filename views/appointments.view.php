@@ -7,7 +7,7 @@
     <form id="appointment-form">
         <label for="appointment-date">Select a Date:</label>
         <input type="date" id="appointment-date" name="appointment-date" required>
-
+<br>
         <label for="appointment-time">Select a Time:</label>
         <select id="appointment-time" name="appointment-time" required>
             <option value="9:00 AM">9:00 AM</option>
@@ -16,9 +16,9 @@
             <option value="2:00 PM">2:00 PM</option>
             <option value="3:00 PM">3:00 PM</option>
             <option value="4:00 PM">4:00 PM</option>
-        </select>
+        </select></br>
 
-        <button type="submit">Schedule Appointment</button>
+      <br>  <button type="submit">Schedule Appointment</button>
     </form>
         
             <div id="confirmation">
@@ -26,6 +26,7 @@
                 <p>Date: <span id="selected-date"></span></p>
                 <p>Time: <span id="selected-time"></span></p>
             </div>
+</br>
         </section>
         <script>
             // Get references to the form elements and confirmation fields

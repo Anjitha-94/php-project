@@ -1,7 +1,7 @@
 <?php require('partials/header.php')?>
 
 
-             <section>
+             <section class="list">
                 <!-- Doctor listings and details -->
                 <h1>List of Clinic Details</h1>
                 <div class="clinic">
@@ -30,13 +30,12 @@
                     <p><strong>Email:</strong> <a href="mailto:clinic1@example.com">clinic1@example.com</a></p>
                 </div>
             </section>
-            <section>
             <div class="button-container">
                 <a href="index.view.php" class="btn">Back</a>   
               </div>
               
            
-        </section>
+    
                 <!-- Add more clinics as needed -->
            
   
