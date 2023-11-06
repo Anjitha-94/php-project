@@ -1,7 +1,7 @@
 <?php require('partials/header.php')?>
 
 
-        <section>
+        <section class="booking">
             <!-- List of appointments and booking form -->
             <h1>Appointment Scheduling</h1>
     <form id="appointment-form">

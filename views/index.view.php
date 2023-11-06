@@ -14,7 +14,7 @@
             <p>Find the right doctor and book an appointment today.</p>
            <!-- Form  -->
                     
-       <form action="#" method="post" id="contactForm" class="contactForm">
+       <form action="process.php" method="post" id="contactForm" class="contactForm">
         
         <div>
           <label for="fullName">Your Name:</label>
