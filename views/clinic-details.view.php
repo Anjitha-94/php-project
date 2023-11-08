@@ -21,8 +21,9 @@
     <section id="treatments">
         <h2>Treatments</h2>
         <ul>
-            <li>Cardiology</li>
-            <li>Dermatology</li>
+        <?php foreach ($treatments as $treatment): ?>
+            <li><?= $treatment['name'] ?></li>
+            <?php endforeach; ?>
             <!-- Add more treatments -->
         </ul>
     </section>
