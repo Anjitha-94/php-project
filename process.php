@@ -12,25 +12,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["fullName"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
-    
-    // Additional data validation and sanitization can be performed here.
-
+   
     // Store the timestamp in the session
     $_SESSION['submission_time'] = time();
 
-    $sql = "INSERT INTO user_data (name, phone, email) VALUES (:name, :phone, :email)";
+    $sql = "INSERT INTO user_data (username, phonenumber, email) VALUES ( $name, $phone, $email);";
     
     try {
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':phone', $phone);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
+
+        $stmt->execute([$name, $phone, $email]);
+
         echo "Data has been inserted into the database.";
+
+        $pdo = null;
+        $stmt = null;
+        die();
+
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+       die( "Query failed" . $e->getMessage());
     }
 }
 
-$pdo = null; // Close the connection
+ // Close the connection
 ?>
